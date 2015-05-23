@@ -1,0 +1,25 @@
+<div class="well text-info ">
+    <div class="row ">
+        <div class="col-md-2">Nombre:</div>
+        <div class="col-md-3">{{first_name}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Apellido:</div>
+        <div class="col-md-4">{{last_name}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Nacimiento:</div>
+        <div class="col-md-4">{{birthday}}</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Género:</div>
+        <div class="col-md-4">{{gender}}</div>
+    </div>
+</div>
+
+<div class="well text-info">
+    <div class="row " ng-repeat="measure in measures">
+        <div class="col-md-2">{{measure.name}}:</div>
+        <div class="col-md-4">{{measure.valor}} {{measure.unidad}}</div>
+    </div>
+</div>
