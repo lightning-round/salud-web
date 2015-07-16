@@ -13,6 +13,10 @@ angular.module('saludWebApp')
             Profile.get({id:$scope.profile_id},function(){
                 $cookies.put('profile_id',$scope.profile_id);
                 $window.location='/#/myProfileInformation'
+            },function(response) {
+                    $scope.message='Lo sentimos, el usuario '+$scope.profile_id+' no es valido';
+                if(response.status === 404) {
+                }
             });
       };
   });
