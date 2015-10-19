@@ -8,8 +8,8 @@
  * Factory in the saludWebApp.
  */
 angular.module('saludWebApp')
-  .factory('Auth', ['$http', '$cookies', '$rootScope', 'global', '$location',
-          function ($http, $cookies, $rootScope, global, $location) {
+  .factory('Auth', ['$http', '$cookies', '$rootScope', 'global', '$location', '$window',
+          function ($http, $cookies, $rootScope, global, $location, $window) {
     
 
     /*
@@ -101,14 +101,14 @@ angular.module('saludWebApp')
     function isLogged(){
         var token = $cookies.get('Token');
         $http.defaults.headers.common['Authorization'] = token;
-
         $http.get(global.getApiUrl() + '/token')
           .success(function(data, status, headers, config) {
             $rootScope.$emit('isLoggedEvent', [true]);
           }).error(function(data, status, headers, config) {
             if (status=='401'){
               $rootScope.$emit('isLoggedEvent', [false]);
-              $location.path('/login');
+              //$location.path('login.html');
+              $window.location="login.html";
             }
           });
       }
