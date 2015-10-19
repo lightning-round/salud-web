@@ -21,7 +21,18 @@ angular
     'mgcrea.ngStrap',
     'nvd3ChartDirectives'
   ])
-  
+  /* FIXME redireccion \login
+  .run(['$http', '$cookies', '$rootScope', 'global', '$location', '$window',
+      function ($http, $cookies, $rootScope, global, $location, $window) {  
+          var token = $cookies.get('Token');                                      
+          $http.defaults.headers.common['Authorization'] = token;                 
+                  alert($location.url()==" ");
+              if (!token && $location.url()) {                                         
+                  // $location.path('/login');                                        
+                  $window.location="login.html";    
+              }
+      }])
+  */
   .config(function ($routeSegmentProvider , $routeProvider) {
     $routeSegmentProvider.
       when('/about', 'about').
