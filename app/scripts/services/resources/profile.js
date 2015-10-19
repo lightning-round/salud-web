@@ -13,17 +13,17 @@ angular.module('saludWebApp')
     // URL of specific API resource
     var url = global.getApiUrl() + '/profiles/:id';
 
-    return $resource( 
-        url,{ 
+    return $resource(
+        url,{
             id: '@_id'
             },{
             update: {
-                method: 'PUT' 
+                method: 'PUT'
                 },
             query: {
                 method: 'GET',
                 isArray: false
                 }
             }
-        );  
+        );
     });
