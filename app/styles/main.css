@@ -251,7 +251,6 @@ body {
   stroke-width: 10px;
 }
 
-
 .box { 
   height:170px;
   text-align:center;
@@ -345,3 +344,12 @@ margin:4px;
   *display: inline!important; 
   float: none!important;
 }
+/*LOGO*/
+.imglogo{
+  width:50%;
+}
+
+.imglogo img{
+  width:65%;
+}
+
