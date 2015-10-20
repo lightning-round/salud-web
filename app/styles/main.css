@@ -238,3 +238,12 @@ body {
   stroke-width: 10px;
 }
 
+/*LOGO*/
+.imglogo{
+  width:50%;
+}
+
+.imglogo img{
+  width:65%;
+}
+
